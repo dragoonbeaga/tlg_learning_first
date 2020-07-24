@@ -6,7 +6,7 @@ GuessTheNumber = "Welcome to guess the number!!!!!"
 print(GuessTheNumber.upper())
 
 print('Hello! What is your name?')
-name = str(input("enter your name: "))
+name = str(input("Enter your name: "))
 
 def guessNumber():
     secretnumber=random.randint(1, 100)
@@ -22,7 +22,7 @@ def guessNumber():
 
         guess= int(input())
 
-    if guess == secretnumber:
+    else:
             print("You are the best " + str(name) + "! you got it in", count, "tries")
             return
 
