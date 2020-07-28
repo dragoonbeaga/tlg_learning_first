@@ -2,33 +2,34 @@
 import random
 import sys
 
-GuessTheNumber = "Welcome to guess the number!!!!!"
-print(GuessTheNumber.upper())
+GuessTheNumber = "Welcome to guess the number!!!!!"  #varible for next line
+print(GuessTheNumber.upper())  #prints above statement
 
-print('Hello! What is your name?')
-name = str(input("Enter your name: "))
+print('Hello! What is your name?')  #asks players name
+name = str(input("Enter your name: "))  #player defines there name here
 
-def guessNumber():
-    secretnumber=random.randint(1, 100)
+def guessNumber():   #defines the game
+    secretnumber=random.randint(1, 100)      #tells python to pick a random number between 1-100
     count=1
-    guess = int(input(str(name) + ", guess any number between 1 and 100: "))
+    guess = int(input(f"{name}, guess any number between 1 and 100: ")) #ask the player to enter an interger
 
     while guess !=secretnumber:
         count+=1
         if guess < secretnumber:
-            print(str(name) + ", Your guess is too low try again")
+            print(f"{name}, Your guess is too low try again")
         elif guess > secretnumber:
-            print(str(name) + ", Your guess is to high try again")
+            print(f"{name}, Your guess is to high try again")
+        #elif guess !=
+         #   print(f"{name}, please enter a whole number")
 
-        guess= int(input())
-
+        guess = int(input())
     else:
-            print("You are the best " + str(name) + "! you got it in", count, "tries")
+            print(f"You are the best {name}! You got it in {count}, tries")
             return
 
 guessNumber()
 
-again = str(input("Do you want to play again (type yes or no): "))
+again = str(input(f"Do you want to play again {name}? (type yes or no): "))
 if again == "yes":
     guessNumber()
 else:
