@@ -33,13 +33,17 @@ def guessNumber():   #defines the game
         guess = int(input())   #stops infite loop and asks for input again after testing above statement
     else:                     #if not less than or greater than. Thne user got the right number.
             print(f"You are the best {name}! You got it in {count}, tries")
-            return
+            play_again()
+
+
+def play_again():
+    again = str(input(f"Do you want to play again {name}? (type yes or no): "))    #asks if user wants to play again
+    if again == "yes":                 #input for above question. if yes. repeasts the game.   all other values eixts the script
+        guessNumber()
+    else:
+        print("Goodbye! " + str(name))
+        sys.exit(0)
+
 
 guessNumber()   #excutes the game.
 
-again = str(input(f"Do you want to play again {name}? (type yes or no): "))    #asks if user wants to play again
-if again == "yes":                 #input for above question. if yes. repeasts the game.   all other values eixts the script
-    guessNumber()
-else:
-    print("Goodbye! " + str(name))
-    sys.exit(0)
