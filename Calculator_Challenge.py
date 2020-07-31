@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #Just a Calcultaor Challenge
 def calulator_choice():
-    choice = str(input(f"Do you need to\n(1). Add\n(2). Subtract\n(3). Multiply\n(4). Divide\n"
+    choice = str(input(f"\nDo you need to\n(1). Add\n(2). Subtract\n(3). Multiply\n(4). Divide\n"
                    f"Please enter the number of your choice: "))
     if(choice == "1" or choice == "1 "):
         add()
@@ -18,7 +18,7 @@ def calulator_choice():
 def add():
     while True:
         try:
-            x = float(input(f"Enter the 1st number you wish to Add: "))
+            x = float(input(f"\nEnter the 1st number you wish to Add: "))
             break
         except ValueError:
             print(f"This is not a number. Try again.")
@@ -34,7 +34,7 @@ def add():
 def sub():
     while True:
         try:
-            x = float(input(f"Enter the 1st number you wish to Subtract: "))
+            x = float(input(f"\nEnter the 1st number you wish to Subtract: "))
             break
         except ValueError:
             print(f"This is not a number. Try again.")
@@ -50,7 +50,7 @@ def sub():
 def mult():
     while True:
         try:
-            x = float(input(f"Enter the 1st number you wish to Multiply: "))
+            x = float(input(f"\nEnter the 1st number you wish to Multiply: "))
             break
         except ValueError:
             print(f"This is not a number. Try again.")
@@ -66,7 +66,7 @@ def mult():
 def div():
     while True:
         try:
-            x = float(input(f"Enter the 1st number you wish to Divide: "))
+            x = float(input(f"\nEnter the 1st number you wish to Divide: "))
             break
         except ValueError:
             print(f"This is not a number. Try again.")
@@ -87,7 +87,7 @@ def calc_again():
         print("Have a good day!")
     else:
         print(f"That is not a valid input please try again")
-
+        calc_again()
 
 print("Welcome to THE CALCULATOR")
 calulator_choice()
