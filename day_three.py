@@ -1,31 +1,13 @@
-#lab day 3
+#!/usr/bin/env python3
+import random
 
-a = 5
-b = 7
+insult = open("\Users\peter\OneDrive\Desktop\New folder\insult.txt", "r")
 
+num= str(input("How many Shakespearean insults would you like?"))
 
-print(a + b)
-print(a * b)
-print(a - b)
-print(a / b)
-print(a % b)
+def insult_generator(num):
+    print("You are a", end="")
+    for x in num:
+      print(random.choice(num))
 
-
-x = 'python'
-
-print(x[0])
-print(x[-1])
-print(len(x))
-print(x.upper())
-
-
-nums = []
-nums.append(10)
-nums.append(100)
-nums.append(10)
-nums.append(500)
-nums.append(56)
-nums.pop()
-print(nums)
-nums.sort()
-print(nums)
+insult_generator(num)
